@@ -1,18 +1,9 @@
 #!/bin/bash
 
-echo
-args=("$@")
-a=${args[0]} 
-b=${args[1]}
-c=${args[2]}
+i=1
 
-
-echo "a : " $a
-echo "b : " $b
-echo "c : " $c
-
-discriminant=$(bc <<< "scale=2;$b*$b-4*$a*$c")
-sroot=$(bc <<<"scale=2;sqrt($discriminant)")
-
-echo $discriminant
-echo $sroot
+while [ $i -le 6 ]
+do
+  echo Number: $i
+  ((i++))
+done
