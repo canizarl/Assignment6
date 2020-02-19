@@ -1,5 +1,9 @@
 #!/bin/bash
 
-lower = 40000
-upper = 42000
+START=40000
+END=42000
 
+for((c=$START; c<=$END; c++))
+do
+    echo "Number : " $c
+done
