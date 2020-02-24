@@ -1,5 +1,4 @@
 #!/bin/bash
-clear
 echo
 
 #compiles program to make sure works on every machine
