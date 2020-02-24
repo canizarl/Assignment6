@@ -1,28 +1,12 @@
 #!/bin/bash
 
-echo
-
-# directory from command line
-args=("$@")
-a="${args[0]}"
+# str="abcde"
+# n=3
+# echo ${str:${#str} - $n}
 
 
-# current working directory
-cwd="$PWD"
+line="someline content"
+echo ${line}
 
-if [[ "$a" == /* ]]
-then 
-    dir="$a"
-else 
-    dir="$cwd""/""$a"
-fi
-
-totalnumber=$(ls -l "$dir"| wc -l)
-
-if (( $(ls -l "$dir"| grep -c "$dir"/*.sh) == 0 ))
-then
-    echo "is equal to zero"
-else
-    echo "is not equal to zero"
-fi
-
+lastchars=${line: -5:1}
+echo ${lastchars}
